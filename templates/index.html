@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divino Products</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/style.css') }}">
+
+    <!-- Fuente de Google Fonts: Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="general-container">
+        <div class="title-container">
+            <h1>Divino Products</h1>
+        <hr class="title-separator"/>
+    </div>
+            <div class="main-container">
+                    <div class="addProduct-container">
+                        <h5 class="subtitle">Ingrese un Producto:</h5>
+                        <div class="addProduct-div">
+                            <form action="/products" method="POST" class="form-container">
+                                <div class="insideForm">
+                                <p class="textContent">Nombre</p>
+                                <input class= "addProduct-input" type="text"  name="name">
+                                <p class="textContent">Precio</p>
+                                <input class= "addProduct-input" type="text"  name="price">
+                                <p class="textContent">Cantidad</p>
+                                <input  class= "addProduct-input" type="text"  name="quantity">
+                                <div class="button-container">
+                                    <button  class="general-btn"  type="submit">Añadir</button>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+           
+    
+                
+                    <div class="availableProduct-container">
+                        <div>
+                            <h5 class="subtitle">Productos Disponibles</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group" style="list-style: none; padding-right: 40px;">
+                                <div class="cards-container">
+                                    {% for product in products %}
+    
+                                        <div class="col">
+                                            <li class="products-List">
+                                                <form action="/edit/{{product.name}}" method="POST" class="available-form">
+                                                    <p class="textContent">Nombre</p>
+                                                    <input type="text" class="form-control" value="{{product.name}}" name="name" >
+                                                    <p class="textContent">Cantidad</p>
+                                                    <input type="text" class="form-control" value="{{product.quantity}}" name="quantity" >
+                                                    <p class="textContent">Precio</p>
+                                                    <input type="text" class="form-control" value="{{product.price}}" name="price" >
+                                                    <div class="editDelete-container">
+                                                        <button class="edit-btn" >Guardar</button>
+                                                        <i class="fa-solid fa-trash"></i> <a href="{{url_for('delete', product_name=product.name)}}" class="delete-btn">Eliminar</a>
+                                                    </div>    
+                                                </form>
+                                            </li>
+                                        </div>
+    
+                                    {% endfor %}
+                                </div>
+                            </ul>
+                        </div> 
+                    </div>
+                
+            </div>
+        
+
+    </div>
+
+   
+    
+</body>
+</html>

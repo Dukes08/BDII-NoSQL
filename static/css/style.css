@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #fff9ec;
+}
+
+/* Estilos de Contenedores */
+.title-separator {
+    height: 1px;
+    width: 50%;
+    background-color: orange;
+    border: none;
+    margin: auto;
+    opacity: 100%;
+}
+
+.general-container{
+    height: 100vh;
+    padding: 8vw;
+}
+
+.title-container{
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.main-container{
+    width: 100%;
+}
+
+.addProduct-container{
+    width: 40vw; 
+    height: 20vw; 
+    background-color: white !important;
+    border: solid 1px black; 
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 2vw;
+    margin-bottom: 100px;
+}
+
+.addProduct-div{
+    width: 100%;
+}
+
+.insideForm{
+    display: grid; 
+    grid-template-columns: 200px 200px; 
+    grid-template-rows: 30px 30px 30px 100px; 
+    gap: 5px; 
+    justify-items: center; 
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContent{
+    font-size: 16px;
+}
+
+.availableProduct-container{
+    width: 80vw;
+    height: auto; 
+    border: solid 1px black; 
+    border-radius: 30px;
+    background-color: white !important;
+    margin: 0 auto;
+    padding: 2vw;
+}
+
+.editDelete-container{
+    display: flex;
+    margin-top: 30px;
+    
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.form-control{
+    border: solid .5px black;
+    width: 200px;
+    border-radius: 5px;
+    height: 25px;
+    padding: 10px;
+}
+
+
+.card-body{
+    padding: 2vw;
+}
+
+.col{
+    width: 30%;
+    padding: 30px;   
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+}
+
+/*Estilos de titulos*/
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    opacity: 85%;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.subtitle{
+    font-size: 22px;
+    font-weight: 700;
+    opacity: 85%;
+    text-align: center;
+    text-shadow: 0px 4px 30px rgba(0,0,0,0.4);
+    padding: 10px;
+}
+
+
+/* Estilos de Botones */
+.general-btn {
+    padding: 10px 60px;
+    border: none;
+    font-weight: 500;
+    background-color: #f27f0c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 300ms;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.general-btn:hover{
+    background: #f7ad19;
+}
+
+.edit-btn{
+    background-color: green; 
+    color: white;
+    border-radius: 5px; 
+    width: 95px; 
+    height: 30px; 
+    border: none; 
+    display: inline-block;
+    margin: 0px 5px;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.edit-btn:hover {
+    background-color: greenyellow;
+    cursor:pointer;
+}
+
+
+.delete-btn{
+    display:inline-block;
+    border:0;
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 5px; 
+    margin: 0px 5px;
+    font-size: 15px;
+    padding: 5px 5px;
+    width: 95px; 
+    height: 30px; 
+    text-align: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+.delete-btn:hover {
+    background-color: #f27f0c;
+    cursor:pointer;
+}
+
+
+.products-List{
+   list-style: none;
+}
+
+.available-form{
+    display: grid; 
+    grid-template-columns: 300px; 
+    grid-template-rows: 30px 30px 30px 30px 30px 30px 30px;  
+    justify-items: center; 
+    align-items: center; 
+    place-content: center;
+}
+  
+
+/*Estilos inputs*/
+.addProduct-input{
+    border: solid .5px black;
+    width: 200px;
+    border-radius: 5px;
+    height: 25px;
+    padding: 10px;
+    color:#f27f0c;
+}
+
+.addProduct-input:hover{
+    border: solid 1.5px #f27f0c
+}
+
+
+
+/*Responsive Web Design*/
+
+
+
+@media (max-width: 1024px) {
+    .col{
+        width: 50%;
+    }
+
+    .addProduct-container{
+        width: 70vw; 
+        height: 30vw;
+    }
+
+    .insideForm{
+        display: grid; 
+        grid-template-columns: 200px 200px; 
+        grid-template-rows:30px 30px 30px 100px ; 
+        gap: 5px; 
+        }
+    
+    /*Estilos inputs*/
+    .addProduct-input{
+        width: 130px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .general-container{
+    padding: 3vw;
+    }
+
+    .title-container{
+    margin-bottom: 8vw;
+    }
+
+    .addProduct-container{
+    width: 60vw; 
+    height: 40vw; 
+    padding: 2vw;
+    margin-bottom: 31.25vw;
+    }
+
+    .insideForm{
+    display: grid; 
+    grid-template-columns: 200px 200px; 
+    grid-template-rows:30px 30px 30px 100px ; 
+    gap: 5px; 
+    }
+
+    .availableProduct-container{
+    width: 80vw;
+    padding: 2vw;
+    }
+
+    /*Estilos inputs*/
+    .addProduct-input{
+    width: 150px;
+    border-radius: 5px;
+    height: 25px;
+    }
+  }
+
+
+  @media (max-width: 540px) {
+    .col{
+        width: 100%;
+    }
+
+    .addProduct-container{
+        width: 95vw; 
+        height: 50vw; 
+        }
+    
+}
+
+@media (max-width: 430px) {
+    .general-container{
+    padding: 4vw;
+    }
+
+    .title-container{
+    margin-bottom: 15vw;
+    }
+
+    .addProduct-container{
+    width: 95vw; 
+    height: 80vw; 
+    }
+
+    .form-control{
+    border: solid .5px black;
+    width: 200px;
+    border-radius: 5px;
+    height: 25px;
+    padding: 10px;
+    }
+
+
+    .card-body{
+    padding: 2vw;
+    }
+
+    .col{
+    width: 100%;
+    padding: 30px;   
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    }
+
+    .available-form{
+    display: grid; 
+    grid-template-columns: 300px; 
+    grid-template-rows: 30px 30px 30px 30px 30px 30px 30px;  
+    justify-items: center; 
+    align-items: center; 
+    place-content: center;
+    }
+
+    /*Estilos inputs*/
+    .addProduct-input{
+    width: 100px;
+    border-radius: 5px;
+    height: 25px;
+    }
+
+  }
+
+
+@media (max-width: 375px) {
+    .insideForm{
+        grid-template-columns: 150px 150px; 
+        grid-template-rows:30px 30px 30px 100px ; 
+        gap: 5px; 
+        }
+
+        .availableProduct-container{
+        width: 70vw;
+        padding: 2vw;
+        }
+    
+        /*Estilos inputs*/
+        .addProduct-input{
+        width: 100px;
+        }
+    
+    }
+
+
+
+
